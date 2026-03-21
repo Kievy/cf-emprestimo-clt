@@ -89,7 +89,6 @@ export default function SectionCTA() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.5 }}
               variants={fadeUp}
-              className="text-center lg:text-left"
               className="text-center lg:text-left text-[16px] lg:text-[20px]"
               style={{
                 fontFamily: POPPINS,
