@@ -160,7 +160,7 @@ export default function SectionComparacao() {
               alt="Mulher sorrindo ao telefone"
               width={499}
               height={620}
-              className="w-[65%] lg:w-full h-auto rounded-lg block"
+              className="w-[65%] md:w-[50%] lg:w-full h-auto rounded-lg block"
             />
 
             {/* Floating card */}
@@ -169,21 +169,20 @@ export default function SectionComparacao() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={cardEntrance}
-              className="absolute left-3 lg:-left-[20px] top-[38%]"
+              className="absolute left-3 lg:-left-[20px] top-[48%] lg:top-[38%]"
             >
               <motion.div
                 animate={{ y: [0, -7, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" as const }}
-                className="flex flex-row items-center gap-2"
+                className="flex flex-row items-center gap-1.5 lg:gap-2"
                 style={{
                   backgroundColor: "#FFFFFF",
                   boxShadow: "0px 2px 6px 0px rgba(16, 24, 40, 0.06)",
-                  padding: "8px",
                   borderRadius: "8px",
                 }}
               >
-                <Image src="/images/sec6-icon-approved.svg" alt="" width={28} height={28} />
-                <span style={{ fontFamily: POPPINS, fontSize: "12px", fontWeight: 400, lineHeight: "1.4", color: DARK, whiteSpace: "nowrap" }}>
+                <Image src="/images/sec6-icon-approved.svg" alt="" width={22} height={22} className="w-[18px] h-[18px] lg:w-[22px] lg:h-[22px]" style={{ padding: "6px 0 6px 6px" }} />
+                <span className="text-[10px] lg:text-[12px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: DARK, whiteSpace: "nowrap", paddingRight: "8px", paddingTop: "6px", paddingBottom: "6px" }}>
                   Empréstimo Aprovado
                 </span>
               </motion.div>
@@ -207,13 +206,13 @@ export default function SectionComparacao() {
             className="flex-1 flex flex-col gap-4 p-[22px] rounded-lg"
             style={{ backgroundColor: "#24ACE4" }}
           >
-            <p style={{ fontFamily: POPPINS, fontSize: "20px", fontWeight: 400, lineHeight: "1.4", color: "#FFFFFF" }}>
+            <p className="text-[15px] lg:text-[20px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: "#FFFFFF" }}>
               Com a CF Soluções Financeiras
             </p>
             {checkItems.map((item) => (
-              <div key={item} className="flex items-center gap-4">
-                <Image src="/images/sec6-icon-check.svg" alt="" width={32} height={32} className="shrink-0" />
-                <span style={{ fontFamily: POPPINS, fontSize: "18px", fontWeight: 400, lineHeight: "1.4", color: "#FFFFFF" }}>
+              <div key={item} className="flex items-center gap-3 lg:gap-4">
+                <Image src="/images/sec6-icon-check.svg" alt="" width={32} height={32} className="shrink-0 w-6 h-6 lg:w-8 lg:h-8" />
+                <span className="text-[13px] lg:text-[18px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: "#FFFFFF" }}>
                   {item}
                 </span>
               </div>
@@ -229,13 +228,13 @@ export default function SectionComparacao() {
             className="flex-1 flex flex-col gap-4 p-[22px] rounded-lg"
             style={{ backgroundColor: "#E9F2F7" }}
           >
-            <p style={{ fontFamily: POPPINS, fontSize: "20px", fontWeight: 400, lineHeight: "1.4", color: DARK }}>
+            <p className="text-[15px] lg:text-[20px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: DARK }}>
               Em uma única instituição
             </p>
             {xItems.map((item) => (
-              <div key={item} className="flex items-center gap-4">
-                <Image src="/images/sec6-icon-xcircle.svg" alt="" width={32} height={32} className="shrink-0" />
-                <span style={{ fontFamily: POPPINS, fontSize: "18px", fontWeight: 400, lineHeight: "1.4", color: DARK }}>
+              <div key={item} className="flex items-center gap-3 lg:gap-4">
+                <Image src="/images/sec6-icon-xcircle.svg" alt="" width={32} height={32} className="shrink-0 w-6 h-6 lg:w-8 lg:h-8" />
+                <span className="text-[13px] lg:text-[18px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: DARK }}>
                   {item}
                 </span>
               </div>

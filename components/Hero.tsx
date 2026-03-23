@@ -189,7 +189,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
             variants={fadeIn}
-            className="relative w-full shrink-0 mt-8 lg:mt-0 lg:ml-auto lg:self-end"
+            className="relative w-full shrink-0 mt-8 lg:mt-0 lg:ml-auto lg:self-end mx-auto lg:mx-0"
             style={{ maxWidth: "605px" }}
           >
             {/* aspect-ratio keeps full image on mobile; desktop uses fixed height */}

@@ -40,8 +40,8 @@ const SHIFT = (CARD_W + GAP) * carouselImages.length; // 1872px
 export default function SectionQuem() {
   return (
     <section
-      className="relative w-full overflow-hidden"
-      style={{ backgroundColor: "#E9F2F7", minHeight: "1135px" }}
+      className="relative w-full overflow-hidden lg:min-h-[1135px]"
+      style={{ backgroundColor: "#E9F2F7" }}
     >
       {/* Decorative BG */}
       <div

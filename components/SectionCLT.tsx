@@ -140,9 +140,10 @@ export default function SectionCLT() {
 
             {/* Text */}
             <div
-              className="flex flex-col gap-3 p-6 lg:pt-[63px] lg:pl-8 lg:pr-8 lg:pb-8"
+              className="flex flex-col items-center lg:items-start gap-3 p-6 lg:pt-[63px] lg:pl-8 lg:pr-8 lg:pb-8"
             >
               <p
+                className="text-center lg:text-left"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "20px",
@@ -155,6 +156,7 @@ export default function SectionCLT() {
                 Mais previsibilidade para o seu orçamento
               </p>
               <p
+                className="text-center lg:text-left"
                 style={{
                   fontFamily: "Poppins, sans-serif",
                   fontSize: "16px",

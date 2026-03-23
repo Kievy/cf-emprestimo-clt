@@ -33,7 +33,7 @@ export default function SectionMargem() {
       >
         {/* ── LEFT: COPY ──────────────────────────────────────── */}
         <div
-          className="flex flex-col gap-8 shrink-0 mb-8 lg:mb-0"
+          className="flex flex-col items-center lg:items-start gap-8 shrink-0 mb-8 lg:mb-0 w-full"
           style={{ maxWidth: "536px" }}
         >
           {/* Badge + Heading */}

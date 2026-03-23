@@ -24,8 +24,7 @@ const fadeIn = {
 export default function SectionBanks() {
   return (
     <section
-      className="relative w-full overflow-hidden bg-white"
-      style={{ minHeight: "1081px" }}
+      className="relative w-full overflow-hidden bg-white lg:min-h-[1081px]"
     >
       {/* Section background grid */}
       {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -65,11 +65,10 @@ export default function SectionPorque() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={slideRight}
-          className="relative shrink-0 rounded-lg overflow-hidden order-2 lg:order-1 mt-10 lg:mt-[42px] mx-auto lg:mx-0"
+          className="relative shrink-0 rounded-lg overflow-hidden order-2 lg:order-1 mt-10 lg:mt-[42px] mx-auto lg:mx-0 w-[72%] lg:w-full"
           style={{
-            width: "100%",
             maxWidth: "384px",
-            height: "518px",
+            height: "420px",
             backgroundColor: "#5CC2EB",
           }}
         >
@@ -82,19 +81,20 @@ export default function SectionPorque() {
 
           {/* Spinning logo */}
           <div
-            className="absolute"
-            style={{ right: "14px", top: "168px", width: "109px", height: "109px" }}
+            className="absolute w-[72px] h-[72px] lg:w-[109px] lg:h-[109px]"
+            style={{ right: "14px", top: "130px" }}
           >
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 14, repeat: Infinity, ease: "linear" }}
-              style={{ width: "109px", height: "109px" }}
+              className="w-full h-full"
             >
               <Image
                 src="/images/sec10-logo.svg"
                 alt="CF Soluções Financeiras"
                 width={109}
                 height={109}
+                className="w-full h-full"
               />
             </motion.div>
           </div>
