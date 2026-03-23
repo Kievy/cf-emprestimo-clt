@@ -23,7 +23,7 @@ const carouselImages = [
 ];
 
 const pills = [
-  ["•Trabalhadores CLT", "•Trabalhadores CLT"],
+  ["•Trabalhadores CLT", "•Maiores de idade"],
   [
     "•Pessoas com margem disponível para contratação",
     "•Clientes sujeitos à análise de crédito",
