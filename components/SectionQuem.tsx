@@ -2,9 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const POPPINS = "Poppins, sans-serif";
-const DARK = "#303A3E";
+import { FONT, C } from "@/lib/tokens";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -41,7 +39,7 @@ export default function SectionQuem() {
   return (
     <section
       className="relative w-full overflow-hidden lg:min-h-[1135px]"
-      style={{ backgroundColor: "#E9F2F7" }}
+      style={{ backgroundColor: C.primaryBg }}
     >
       {/* Decorative BG */}
       <div
@@ -70,16 +68,16 @@ export default function SectionQuem() {
               viewport={{ once: true, amount: 0.5 }}
               variants={fadeUp}
               className="inline-flex items-center justify-center px-4 py-[10px] rounded-lg w-fit"
-              style={{ backgroundColor: "#FFFFFF" }}
+              style={{ backgroundColor: C.white }}
             >
               <span
                 className="text-[12px] lg:text-[14px]"
                 style={{
-                  fontFamily: POPPINS,
+                  fontFamily: FONT,
                   fontWeight: 600,
                   lineHeight: "1.4",
                   textTransform: "uppercase",
-                  color: "#24ACE4",
+                  color: C.primary,
                   letterSpacing: "0.05em",
                 }}
               >
@@ -95,15 +93,15 @@ export default function SectionQuem() {
               variants={fadeUp}
               className="text-center text-balance"
               style={{
-                fontFamily: POPPINS,
+                fontFamily: FONT,
                 fontSize: "clamp(24px, 3vw, 40px)",
                 fontWeight: 400,
                 lineHeight: "1.2",
-                color: DARK,
+                color: C.dark,
               }}
             >
               <span style={{ fontWeight: 400 }}>Quem </span>
-              <span style={{ fontWeight: 600, color: "#24ACE4" }}>pode solicitar</span>
+              <span style={{ fontWeight: 600, color: C.primary }}>pode solicitar</span>
               <span style={{ fontWeight: 400 }}> o Empréstimo CLT?</span>
             </motion.h2>
           </div>
@@ -117,10 +115,10 @@ export default function SectionQuem() {
             variants={fadeUp}
             className="text-center text-[16px] lg:text-[20px]"
             style={{
-              fontFamily: POPPINS,
+              fontFamily: FONT,
               fontWeight: 400,
               lineHeight: "1.4",
-              color: DARK,
+              color: C.dark,
             }}
           >
             Essa modalidade é destinada a trabalhadores com carteira assinada
@@ -195,11 +193,11 @@ export default function SectionQuem() {
                   className="flex items-center rounded-lg px-[22px] py-4 flex-1"
                   style={{
                     backgroundColor: "rgba(255, 255, 255, 0.5)",
-                    border: "1px solid #FFFFFF",
+                    border: `1px solid ${C.white}`,
                   }}
                 >
-                  <span className="text-[16px] lg:text-[20px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: DARK }}>
-                    <span style={{ color: "#24ACE4" }}>{text[0]}</span>
+                  <span className="text-[16px] lg:text-[20px]" style={{ fontFamily: FONT, fontWeight: 400, lineHeight: "1.4", color: C.dark }}>
+                    <span style={{ color: C.primary }}>{text[0]}</span>
                     {text.includes("disponível")
                       ? <>Pessoas com margem <span className="hidden lg:inline">disponível </span>para contratação</>
                       : text.slice(1)
@@ -220,10 +218,10 @@ export default function SectionQuem() {
           variants={fadeUp}
           className="text-center mx-auto mt-14 lg:mt-[62px] text-[16px] lg:text-[20px]"
           style={{
-            fontFamily: POPPINS,
+            fontFamily: FONT,
             fontWeight: 400,
             lineHeight: "1.4",
-            color: DARK,
+            color: C.dark,
             maxWidth: "558px",
           }}
         >

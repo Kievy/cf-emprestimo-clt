@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 import WhatsAppButton from "@/components/WhatsAppButton";
-
-const POPPINS = "Poppins, sans-serif";
-const DARK = "#303A3E";
+import { FONT, C } from "@/lib/tokens";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -29,7 +27,7 @@ export default function SectionCTA() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55, ease: "easeOut" as const }}
           className="rounded-xl flex flex-col px-6 pt-12 pb-12 lg:px-[39px] lg:pt-[77px] lg:pb-[78px] gap-12 lg:gap-[108px]"
-          style={{ backgroundColor: "#24ACE4" }}
+          style={{ backgroundColor: C.primary }}
         >
           {/* ── TOP: COPY ROW ─────────────────────────────── */}
           <div className="flex flex-col lg:flex-row lg:items-end lg:gap-[75px]">
@@ -45,16 +43,16 @@ export default function SectionCTA() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={fadeUp}
                 className="inline-flex items-center justify-center px-4 py-[10px] rounded-lg w-fit"
-                style={{ backgroundColor: "#FFFFFF" }}
+                style={{ backgroundColor: C.white }}
               >
                 <span
                   className="text-[12px] lg:text-[14px]"
                   style={{
-                    fontFamily: POPPINS,
+                    fontFamily: FONT,
                     fontWeight: 600,
                     lineHeight: "1.4",
                     textTransform: "uppercase",
-                    color: "#24ACE4",
+                    color: C.primary,
                     letterSpacing: "0.05em",
                   }}
                 >
@@ -70,11 +68,11 @@ export default function SectionCTA() {
                 variants={fadeUp}
                 className="text-center lg:text-left text-balance"
                 style={{
-                  fontFamily: POPPINS,
+                  fontFamily: FONT,
                   fontSize: "clamp(24px, 3vw, 40px)",
                   fontWeight: 400,
                   lineHeight: "1.2",
-                  color: "#FFFFFF",
+                  color: C.white,
                 }}
               >
                 <span style={{ fontWeight: 400 }}>Solicite sua simulação e veja qual banco oferece a </span>
@@ -91,10 +89,10 @@ export default function SectionCTA() {
               variants={fadeUp}
               className="text-center lg:text-left text-[16px] lg:text-[20px] mx-auto lg:mx-0"
               style={{
-                fontFamily: POPPINS,
+                fontFamily: FONT,
                 fontWeight: 400,
                 lineHeight: "1.4",
-                color: "#FFFFFF",
+                color: C.white,
                 maxWidth: "536px",
               }}
             >
@@ -119,11 +117,11 @@ export default function SectionCTA() {
             <p
               className="text-center"
               style={{
-                fontFamily: POPPINS,
+                fontFamily: FONT,
                 fontSize: "12px",
                 fontWeight: 400,
                 lineHeight: "1.4",
-                color: "#FFFFFF",
+                color: C.white,
               }}
             >
               Atendimento rápido | Comparação entre bancos | Sujeito à análise

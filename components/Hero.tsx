@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { FONT, C } from "@/lib/tokens";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -35,10 +36,7 @@ export default function Hero() {
   return (
     <section
       className="relative w-full overflow-hidden lg:h-[780px]"
-      style={{
-        backgroundColor: "#E9F2F7",
-        minHeight: "780px",
-      }}
+      style={{ backgroundColor: C.primaryBg, minHeight: "780px" }}
     >
       {/* Tiled background pattern */}
       <div
@@ -60,26 +58,24 @@ export default function Hero() {
             className="flex flex-col gap-8 w-full lg:w-[551px] shrink-0 pt-12 pb-12 lg:pt-[143px] lg:pb-0"
             style={{ zIndex: 2 }}
           >
-            {/* Frame 1: badge + heading + body */}
             <div className="flex flex-col gap-8">
-              {/* Frame 2: badge + heading */}
               <div className="flex flex-col gap-4 items-center lg:items-start">
-                {/* Caption badge */}
+                {/* Badge */}
                 <motion.div
                   custom={0}
                   initial="hidden"
                   animate="visible"
                   variants={fadeUp}
                   className="inline-flex items-center justify-center px-4 py-[10px] rounded-lg w-fit"
-                  style={{ backgroundColor: "#FFFFFF" }}
+                  style={{ backgroundColor: C.white }}
                 >
                   <span
                     className="font-semibold tracking-wider text-[12px] lg:text-[14px]"
                     style={{
-                      fontFamily: "Poppins, sans-serif",
+                      fontFamily: FONT,
                       lineHeight: "1.4",
                       textTransform: "uppercase",
-                      color: "#24ACE4",
+                      color: C.primary,
                       letterSpacing: "0.05em",
                     }}
                   >
@@ -95,49 +91,37 @@ export default function Hero() {
                   variants={fadeUp}
                   className="text-center lg:text-left text-balance"
                   style={{
-                    fontFamily: "Poppins, sans-serif",
+                    fontFamily: FONT,
                     fontSize: "clamp(26px, 4vw, 48px)",
                     fontWeight: 600,
                     lineHeight: "1.2",
-                    color: "#303A3E",
+                    color: C.dark,
                   }}
                 >
                   <span style={{ fontWeight: 400 }}>Dinheiro para organizar sua vida com </span>
-                  <span style={{ fontWeight: 600, color: "#24ACE4" }}>mais praticidade e menos burocracia</span>
+                  <span style={{ fontWeight: 600, color: C.primary }}>mais praticidade e menos burocracia</span>
                 </motion.h1>
               </div>
 
-              {/* Body text */}
+              {/* Body */}
               <motion.p
                 custom={2}
                 initial="hidden"
                 animate="visible"
                 variants={fadeUp}
                 className="text-center lg:text-left text-[16px] lg:text-[20px]"
-                style={{
-                  fontFamily: "Poppins, sans-serif",
-                  fontWeight: 400,
-                  lineHeight: "1.4",
-                  color: "#303A3E",
-                }}
+                style={{ fontFamily: FONT, fontWeight: 400, lineHeight: "1.4", color: C.dark }}
               >
                 Analisamos seu perfil em diferentes bancos para buscar a melhor condição, com contratação simples, atendimento rápido e pagamento em até 36x.
               </motion.p>
             </div>
 
-            {/* Frame 11: CTA + disclaimer */}
+            {/* CTA + disclaimer */}
             <div className="flex flex-col gap-2 items-center lg:items-start">
-              {/* CTA Button */}
-              <motion.div
-                custom={3}
-                initial="hidden"
-                animate="visible"
-                variants={fadeUp}
-              >
+              <motion.div custom={3} initial="hidden" animate="visible" variants={fadeUp}>
                 <WhatsAppButton />
               </motion.div>
 
-              {/* Disclaimer */}
               <motion.div
                 custom={4}
                 initial="hidden"
@@ -150,41 +134,21 @@ export default function Hero() {
                     <motion.span
                       key={delay}
                       className="absolute w-full h-full rounded-full"
-                      style={{ backgroundColor: "#FFA333" }}
+                      style={{ backgroundColor: C.orange }}
                       animate={{ scale: [1, 1.1, 2.8], opacity: [0, 0.38, 0] }}
-                      transition={{
-                        duration: 2.4,
-                        repeat: Infinity,
-                        ease: "easeOut" as const,
-                        times: [0, 0.08, 1],
-                        delay,
-                      }}
+                      transition={{ duration: 2.4, repeat: Infinity, ease: "easeOut" as const, times: [0, 0.08, 1], delay }}
                     />
                   ))}
-                  <Image
-                    src="/icons/icon-dot.svg"
-                    alt=""
-                    width={10}
-                    height={10}
-                    className="relative z-10"
-                  />
+                  <Image src="/icons/icon-dot.svg" alt="" width={10} height={10} className="relative z-10" />
                 </div>
-                <span
-                  style={{
-                    fontFamily: "Poppins, sans-serif",
-                    fontSize: "12px",
-                    fontWeight: 400,
-                    lineHeight: "1.4",
-                    color: "#303A3E",
-                  }}
-                >
+                <span style={{ fontFamily: FONT, fontSize: "12px", fontWeight: 400, lineHeight: "1.4", color: C.dark }}>
                   Chance para negativados mediante análise
                 </span>
               </motion.div>
             </div>
           </div>
 
-          {/* ── RIGHT: PHOTO + CARDS (unified responsive) ─────── */}
+          {/* ── RIGHT: PHOTO + CARDS ─────── */}
           <motion.div
             initial="hidden"
             animate="visible"
@@ -192,11 +156,7 @@ export default function Hero() {
             className="relative w-full shrink-0 mt-8 lg:mt-0 lg:ml-auto lg:self-end mx-auto lg:mx-0"
             style={{ maxWidth: "605px" }}
           >
-            {/* aspect-ratio keeps full image on mobile; desktop uses fixed height */}
-            <div
-              className="relative w-full lg:h-[716px]"
-              style={{ aspectRatio: "605 / 716" }}
-            >
+            <div className="relative w-full lg:h-[716px]" style={{ aspectRatio: "605 / 716" }}>
               <Image
                 src="/images/hero-photo.png"
                 alt="Pessoa sorrindo com smartphone"
@@ -205,7 +165,7 @@ export default function Hero() {
                 priority
               />
 
-              {/* Card 1 – Processo 100% digital */}
+              {/* Card 1 */}
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -216,35 +176,16 @@ export default function Hero() {
                   animate={{ y: [0, -7, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" as const }}
                   className="flex flex-row items-center gap-2"
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    boxShadow: "0px 2px 6px 0px rgba(16, 24, 40, 0.06)",
-                    padding: "8px",
-                    borderRadius: "8px",
-                  }}
+                  style={{ backgroundColor: C.white, boxShadow: "0px 2px 6px 0px rgba(16, 24, 40, 0.06)", padding: "8px", borderRadius: "8px" }}
                 >
-                  <Image
-                    src="/icons/icon-digital.svg"
-                    alt="Ícone digital"
-                    width={28}
-                    height={28}
-                  />
-                  <span
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      fontSize: "12px",
-                      fontWeight: 400,
-                      lineHeight: "1.4",
-                      color: "#303A3E",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
+                  <Image src="/icons/icon-digital.svg" alt="" width={28} height={28} />
+                  <span style={{ fontFamily: FONT, fontSize: "12px", fontWeight: 400, lineHeight: "1.4", color: C.dark, whiteSpace: "nowrap" }}>
                     Processo 100% digital
                   </span>
                 </motion.div>
               </motion.div>
 
-              {/* Card 2 – Parcelamento em até 36x */}
+              {/* Card 2 */}
               <motion.div
                 initial="hidden"
                 animate="visible"
@@ -255,29 +196,10 @@ export default function Hero() {
                   animate={{ y: [0, -7, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" as const, delay: 1.5 }}
                   className="flex flex-row items-center gap-2"
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    boxShadow: "0px 2px 6px 0px rgba(16, 24, 40, 0.06)",
-                    padding: "8px",
-                    borderRadius: "8px",
-                  }}
+                  style={{ backgroundColor: C.white, boxShadow: "0px 2px 6px 0px rgba(16, 24, 40, 0.06)", padding: "8px", borderRadius: "8px" }}
                 >
-                  <Image
-                    src="/icons/icon-parcelamento.svg"
-                    alt="Ícone parcelamento"
-                    width={28}
-                    height={28}
-                  />
-                  <span
-                    style={{
-                      fontFamily: "Poppins, sans-serif",
-                      fontSize: "12px",
-                      fontWeight: 400,
-                      lineHeight: "1.4",
-                      color: "#303A3E",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
+                  <Image src="/icons/icon-parcelamento.svg" alt="" width={28} height={28} />
+                  <span style={{ fontFamily: FONT, fontSize: "12px", fontWeight: 400, lineHeight: "1.4", color: C.dark, whiteSpace: "nowrap" }}>
                     Parcelamento em até 36x
                   </span>
                 </motion.div>

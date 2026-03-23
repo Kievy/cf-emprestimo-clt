@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { FONT, C } from "@/lib/tokens";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -39,9 +40,6 @@ const compCard = (delay: number) => ({
     transition: { duration: 0.5, delay, ease: "easeOut" as const },
   },
 });
-
-const POPPINS = "Poppins, sans-serif";
-const DARK = "#303A3E";
 
 const checkItems = [
   "Simulação em vários bancos parceiros",
@@ -85,16 +83,16 @@ export default function SectionComparacao() {
                 viewport={{ once: true, amount: 0.5 }}
                 variants={fadeUp}
                 className="inline-flex items-center justify-center px-4 py-[10px] rounded-lg w-fit"
-                style={{ backgroundColor: "#E9F2F7" }}
+                style={{ backgroundColor: C.primaryBg }}
               >
                 <span
                   className="text-[12px] lg:text-[14px]"
                   style={{
-                    fontFamily: POPPINS,
+                    fontFamily: FONT,
                     fontWeight: 600,
                     lineHeight: "1.4",
                     textTransform: "uppercase",
-                    color: "#24ACE4",
+                    color: C.primary,
                     letterSpacing: "0.05em",
                   }}
                 >
@@ -111,15 +109,15 @@ export default function SectionComparacao() {
                 variants={fadeUp}
                 className="text-center lg:text-left text-balance"
                 style={{
-                  fontFamily: POPPINS,
+                  fontFamily: FONT,
                   fontSize: "clamp(24px, 3vw, 40px)",
                   fontWeight: 400,
                   lineHeight: "1.2",
-                  color: DARK,
+                  color: C.dark,
                 }}
               >
                 <span style={{ fontWeight: 400 }}>Aqui você </span>
-                <span style={{ fontWeight: 600, color: "#24ACE4" }}>não depende</span>
+                <span style={{ fontWeight: 600, color: C.primary }}>não depende</span>
                 <span style={{ fontWeight: 400 }}> de uma única proposta</span>
               </motion.h2>
             </div>
@@ -133,10 +131,10 @@ export default function SectionComparacao() {
               variants={fadeUp}
               className="text-center lg:text-left text-[16px] lg:text-[20px]"
               style={{
-                fontFamily: POPPINS,
+                fontFamily: FONT,
                 fontWeight: 400,
                 lineHeight: "1.4",
-                color: DARK,
+                color: C.dark,
               }}
             >
               Muitas vezes, quem procura crédito recebe apenas uma condição e
@@ -176,13 +174,13 @@ export default function SectionComparacao() {
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" as const }}
                 className="flex flex-row items-center gap-1.5 lg:gap-2"
                 style={{
-                  backgroundColor: "#FFFFFF",
+                  backgroundColor: C.white,
                   boxShadow: "0px 2px 6px 0px rgba(16, 24, 40, 0.06)",
                   borderRadius: "8px",
                 }}
               >
                 <Image src="/images/sec6-icon-approved.svg" alt="" width={22} height={22} className="w-[18px] h-[18px] lg:w-[22px] lg:h-[22px]" style={{ padding: "6px 0 6px 6px" }} />
-                <span className="text-[10px] lg:text-[12px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: DARK, whiteSpace: "nowrap", paddingRight: "8px", paddingTop: "6px", paddingBottom: "6px" }}>
+                <span className="text-[10px] lg:text-[12px]" style={{ fontFamily: FONT, fontWeight: 400, lineHeight: "1.4", color: C.dark, whiteSpace: "nowrap", paddingRight: "8px", paddingTop: "6px", paddingBottom: "6px" }}>
                   Empréstimo Aprovado
                 </span>
               </motion.div>
@@ -204,15 +202,15 @@ export default function SectionComparacao() {
             viewport={{ once: true, amount: 0.2 }}
             variants={compCard(0.1)}
             className="flex-1 flex flex-col gap-4 p-[22px] rounded-lg"
-            style={{ backgroundColor: "#24ACE4" }}
+            style={{ backgroundColor: C.primary }}
           >
-            <p className="text-[15px] lg:text-[20px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: "#FFFFFF" }}>
+            <p className="text-[15px] lg:text-[20px]" style={{ fontFamily: FONT, fontWeight: 400, lineHeight: "1.4", color: C.white }}>
               Com a CF Soluções Financeiras
             </p>
             {checkItems.map((item) => (
               <div key={item} className="flex items-center gap-3 lg:gap-4">
                 <Image src="/images/sec6-icon-check.svg" alt="" width={32} height={32} className="shrink-0 w-6 h-6 lg:w-8 lg:h-8" />
-                <span className="text-[13px] lg:text-[18px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: "#FFFFFF" }}>
+                <span className="text-[13px] lg:text-[18px]" style={{ fontFamily: FONT, fontWeight: 400, lineHeight: "1.4", color: C.white }}>
                   {item}
                 </span>
               </div>
@@ -226,15 +224,15 @@ export default function SectionComparacao() {
             viewport={{ once: true, amount: 0.2 }}
             variants={compCard(0.2)}
             className="flex-1 flex flex-col gap-4 p-[22px] rounded-lg"
-            style={{ backgroundColor: "#E9F2F7" }}
+            style={{ backgroundColor: C.primaryBg }}
           >
-            <p className="text-[15px] lg:text-[20px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: DARK }}>
+            <p className="text-[15px] lg:text-[20px]" style={{ fontFamily: FONT, fontWeight: 400, lineHeight: "1.4", color: C.dark }}>
               Em uma única instituição
             </p>
             {xItems.map((item) => (
               <div key={item} className="flex items-center gap-3 lg:gap-4">
                 <Image src="/images/sec6-icon-xcircle.svg" alt="" width={32} height={32} className="shrink-0 w-6 h-6 lg:w-8 lg:h-8" />
-                <span className="text-[13px] lg:text-[18px]" style={{ fontFamily: POPPINS, fontWeight: 400, lineHeight: "1.4", color: DARK }}>
+                <span className="text-[13px] lg:text-[18px]" style={{ fontFamily: FONT, fontWeight: 400, lineHeight: "1.4", color: C.dark }}>
                   {item}
                 </span>
               </div>
